@@ -22,10 +22,15 @@ What sources, collaborators, and assumptions informed this work?
 
 ## Verification Checklist
 
+- [ ] I rebased on the latest `main` before opening this PR
 - [ ] I ran `npm run validate`
 - [ ] I ran `npm run cli -- help`
+- [ ] I ran `npm run build --workspaces`
+- [ ] I ran `npm test --workspaces --if-present`
+- [ ] I ran `npm run lint --workspaces --if-present`
 - [ ] I verified schema compatibility for changed records
 - [ ] I documented any uncertainty or unverifiable claims
+- [ ] This is not a merge-only PR
 
 ## Local-First & Privacy Review
 
