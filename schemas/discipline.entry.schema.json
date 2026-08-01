@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sovereign.local/schemas/discipline.entry.schema.json",
+  "title": "Discipline Entry Payload",
+  "type": "object",
+  "required": [
+    "date",
+    "practices"
+  ],
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "practices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "minutes"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "minutes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "intensity": {
+            "type": "string",
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "sleep_hours": {
+      "type": "number",
+      "minimum": 0
+    },
+    "recovery_notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

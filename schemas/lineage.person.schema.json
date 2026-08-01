@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sovereign.local/schemas/lineage.person.schema.json",
+  "title": "Lineage Person Payload",
+  "type": "object",
+  "required": [
+    "full_name"
+  ],
+  "properties": {
+    "full_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "birth_date": {
+      "type": "string"
+    },
+    "death_date": {
+      "type": "string"
+    },
+    "locations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "relation",
+          "target_id"
+        ],
+        "properties": {
+          "relation": {
+            "type": "string"
+          },
+          "target_id": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}
