@@ -1,0 +1,22 @@
+{
+  "name": "@sovereign/verifiable",
+  "version": "1.0.0",
+  "description": "Content-addressable proofs and attestation helpers for verifiable truth.",
+  "license": "AGPL-3.0-only",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test",
+    "lint": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@sovereign/core": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  },
+  "keywords": ["sovereign", "verifiable", "proof", "attestation", "hash", "cid"]
+}

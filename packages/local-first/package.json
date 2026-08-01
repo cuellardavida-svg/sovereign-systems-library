@@ -1,0 +1,22 @@
+{
+  "name": "@sovereign/local-first",
+  "version": "1.0.0",
+  "description": "Offline-capable, privacy-preserving sync primitives for local-first applications.",
+  "license": "AGPL-3.0-only",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test",
+    "lint": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@sovereign/core": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  },
+  "keywords": ["sovereign", "local-first", "offline", "sync", "privacy", "crdt"]
+}
