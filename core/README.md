@@ -1,6 +1,6 @@
-# @sovereign/core
+# @sovereign/runtime
 
-Shared core utilities for:
+Shared JavaScript runtime utilities for the Sovereign Systems Library apps:
 
 - record normalization
 - append-only style ledger utilities

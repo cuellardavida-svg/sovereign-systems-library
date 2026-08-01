@@ -1,14 +1,19 @@
 {
   "name": "sovereign-systems-library",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "description": "Local-first, verifiable, decoupled monorepo for sovereign domain tools.",
-  "license": "MIT",
+  "description": "A local-first, verifiable, decoupled monorepo of sovereign domain tools — built around privacy, cross-disciplinary pedagogy, and verifiable truth.",
+  "license": "AGPL-3.0-only",
   "workspaces": [
     "core",
-    "apps/*"
+    "apps/*",
+    "packages/*"
   ],
   "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "clean": "npm run clean --workspaces --if-present",
     "cli": "node tools/cli.js",
     "validate": "node tools/cli.js validate",
     "new:record": "node tools/cli.js new-record",
@@ -17,5 +22,22 @@
     "discipline:log": "node tools/cli.js discipline:log",
     "sim:run": "node tools/cli.js sim:run",
     "story:prompt": "node tools/cli.js story:prompt"
-  }
+  },
+  "engines": {
+    "node": ">=18",
+    "npm": ">=9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cuellardavida-svg/sovereign-systems-library.git"
+  },
+  "keywords": [
+    "decoupled-data",
+    "local-first",
+    "privacy",
+    "pedagogy",
+    "verifiable",
+    "monorepo",
+    "sovereign"
+  ]
 }
