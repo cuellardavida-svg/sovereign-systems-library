@@ -1,0 +1,20 @@
+{
+  "name": "sovereign-quickstart",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Quickstart demo for the Sovereign Systems Library.",
+  "scripts": {
+    "start": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "@sovereign/core": "*",
+    "@sovereign/decoupled-data": "*",
+    "@sovereign/local-first": "*",
+    "@sovereign/pedagogy": "*",
+    "@sovereign/verifiable": "*"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.0",
+    "typescript": "^5.4.0"
+  }
+}

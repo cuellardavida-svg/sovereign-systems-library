@@ -1,0 +1,32 @@
+{
+  "name": "sovereign-systems-library",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A monorepo of tools for decoupled data, local-first privacy, cross-disciplinary pedagogy, and verifiable truth.",
+  "license": "AGPL-3.0-only",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "clean": "npm run clean --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=18",
+    "npm": ">=9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cuellardavida-svg/sovereign-systems-library.git"
+  },
+  "keywords": [
+    "decoupled-data",
+    "local-first",
+    "privacy",
+    "pedagogy",
+    "verifiable",
+    "monorepo"
+  ]
+}
