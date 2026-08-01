@@ -67,6 +67,24 @@ Five composable TypeScript packages, each embodying a foundational principle:
 
 ---
 
+## Current State (v1.0.0)
+
+Implemented now:
+
+- Monorepo structure for `packages/*`, `apps/*`, shared `core/`, and `schemas/`
+- Shared CLI scaffolding in `tools/cli.js`
+- Domain and base JSON schema contracts
+- Architecture docs, examples, and contribution templates
+
+Planned next:
+
+- SQLite adapter for `@sovereign/decoupled-data`
+- Expanded CRDT sync behavior for `@sovereign/local-first`
+- Knowledge graph ingestion features for `@sovereign/pedagogy`
+- Stronger attestation and content-proof helpers for `@sovereign/verifiable`
+
+---
+
 ## Monorepo Layout
 
 ```text
@@ -122,11 +140,18 @@ Each package is designed to be:
 
 ## Contributing
 
-1. Fork the repository and create a feature branch.
+1. Fork the repository and create one focused feature branch from `main`.
 2. Install dependencies: `npm install`
 3. Make your changes in the relevant `packages/*` or `apps/*` directory.
 4. Add or update tests, then run: `npm test --workspaces`
 5. Open a pull request using the [PR template](.github/PULL_REQUEST_TEMPLATE.md).
+
+Workflow discipline:
+
+- Prefer one feature branch per scoped change.
+- Keep branches current with `git fetch` + `git rebase origin/main`.
+- Avoid merge-only PRs that only reconcile branch history.
+- Use descriptive Conventional Commit-style PR titles (`feat:`, `fix:`, `docs:`, `chore:`).
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for provenance requirements and [CHANGELOG.md](CHANGELOG.md) for release history.
 

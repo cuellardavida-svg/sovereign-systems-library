@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- CI workflow for build/test/lint/schema/CLI verification on push and pull requests
+
+### Changed
+- Clarified README current-state vs planned roadmap messaging
+- Strengthened contribution and PR workflow guidance to reduce merge-noise and improve review quality
+
 ### Planned
 - `@sovereign/core` v1 public API stabilization
 - `@sovereign/decoupled-data` storage adapter for SQLite
