@@ -1,0 +1,21 @@
+{
+  "name": "sovereign-systems-library",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local-first, verifiable, decoupled monorepo for sovereign domain tools.",
+  "license": "MIT",
+  "workspaces": [
+    "core",
+    "apps/*"
+  ],
+  "scripts": {
+    "cli": "node tools/cli.js",
+    "validate": "node tools/cli.js validate",
+    "new:record": "node tools/cli.js new-record",
+    "lineage:add-person": "node tools/cli.js lineage:add-person",
+    "newsroom:new-article": "node tools/cli.js newsroom:new-article",
+    "discipline:log": "node tools/cli.js discipline:log",
+    "sim:run": "node tools/cli.js sim:run",
+    "story:prompt": "node tools/cli.js story:prompt"
+  }
+}

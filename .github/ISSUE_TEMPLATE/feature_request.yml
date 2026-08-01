@@ -1,0 +1,36 @@
+name: Feature request
+description: Propose a feature for one or more sovereign domain modules.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: checkboxes
+    id: domain
+    attributes:
+      label: Affected domain(s)
+      options:
+        - label: lineage-ledger
+        - label: newsroom-engine
+        - label: discipline-tracker
+        - label: regenerative-sim
+        - label: story-weaving
+        - label: core/schemas/shared tooling
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: What need are you trying to solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe behavior and expected outcomes.
+    validations:
+      required: true
+  - type: textarea
+    id: provenance
+    attributes:
+      label: Sources and rationale
+      description: Add references and assumptions.
