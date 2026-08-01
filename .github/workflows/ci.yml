@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Build workspaces
-        run: npm run build --workspaces
+        run: npm run build --workspaces --if-present
 
       - name: Run tests
         run: npm test --workspaces --if-present
