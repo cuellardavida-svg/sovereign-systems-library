@@ -1,6 +1,6 @@
 # sovereign-systems-library
 
-> A monorepo of tools that apply the principles of **decoupled data**, **local-first privacy**, **cross-disciplinary pedagogy**, and **verifiable truth** to entirely new domains.
+> A local-first monorepo of tools that apply the principles of **decoupled data**, **local-first privacy**, **cross-disciplinary pedagogy**, and **verifiable truth** to entirely new domains.
 
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)](https://www.typescriptlang.org/)
@@ -8,9 +8,26 @@
 
 ---
 
-## Overview
+## Domains
 
-The **Sovereign Systems Library** is a quintet monorepo — five composable packages designed to be used independently or together. Each package embodies a foundational principle for building systems that respect human agency, epistemic integrity, and open knowledge.
+- **Sovereign Lineage Ledger** — genealogy / history
+- **Decentralized Newsroom Engine** — journalism
+- **Kinaesthetic Discipline Tracker** — movement / restoration
+- **Regenerative Economics Simulator** — micro-economics
+- **Autonomous Story-Weaving Matrix** — creative writing
+
+## Architectural Pillars
+
+- Decoupled logic and data
+- Local-first storage with optional Git workflows
+- Verifiable provenance and source lineage
+- Transparent collaboration patterns
+
+---
+
+## TypeScript Package Layer (`packages/`)
+
+Five composable TypeScript packages, each embodying a foundational principle:
 
 | Package | Principle | Description |
 |---|---|---|
@@ -22,51 +39,73 @@ The **Sovereign Systems Library** is a quintet monorepo — five composable pack
 
 ---
 
-## Getting Started
+## Quick Start
 
-### Prerequisites
+1. Install dependencies:
 
-- Node.js ≥ 18
-- npm ≥ 9 (workspaces support)
+   ```bash
+   npm install
+   ```
 
-### Install all packages
+2. Build all TypeScript packages:
 
-```bash
-npm install
-```
+   ```bash
+   npm run build --workspaces
+   ```
 
-### Build all packages
+3. Show CLI help:
 
-```bash
-npm run build --workspaces
-```
+   ```bash
+   npm run cli -- help
+   ```
 
-### Run all tests
+4. Validate all schema files:
 
-```bash
-npm test --workspaces
+   ```bash
+   npm run validate
+   ```
+
+---
+
+## Monorepo Layout
+
+```text
+.
+├── packages/               # TypeScript library packages (@sovereign/*)
+│   ├── core/
+│   ├── decoupled-data/
+│   ├── local-first/
+│   ├── pedagogy/
+│   └── verifiable/
+├── core/                   # Shared JS runtime utilities
+├── apps/                   # Domain application stubs
+│   ├── lineage-ledger/
+│   ├── newsroom-engine/
+│   ├── discipline-tracker/
+│   ├── regenerative-sim/
+│   └── story-weaving/
+├── schemas/                # JSON Schema contracts
+├── tools/                  # CLI tooling
+├── docs/                   # Architecture documentation
+├── examples/               # Runnable demos
+└── .github/                # Issue & PR templates
 ```
 
 ---
 
-## Repository Structure
+## Shared Record Contract (v1)
 
-```
-sovereign-systems-library/
-├── packages/
-│   ├── core/                  # @sovereign/core
-│   ├── decoupled-data/        # @sovereign/decoupled-data
-│   ├── local-first/           # @sovereign/local-first
-│   ├── pedagogy/              # @sovereign/pedagogy
-│   └── verifiable/            # @sovereign/verifiable
-├── docs/
-│   └── architecture.md        # High-level design doc
-├── examples/
-│   └── quickstart/            # Runnable quickstart demo
-├── CHANGELOG.md
-├── LICENSE                    # AGPL-3.0
-└── README.md
-```
+All domain records map to the shared [schemas/record.schema.json](schemas/record.schema.json):
+
+- `id`
+- `type`
+- `payload`
+- `created_at`
+- `updated_at`
+- `source_refs[]`
+- `agent_refs[]`
+- `hash`
+- `parent_hash`
 
 ---
 
@@ -85,11 +124,11 @@ Each package is designed to be:
 
 1. Fork the repository and create a feature branch.
 2. Install dependencies: `npm install`
-3. Make your changes in the relevant `packages/*` directory.
+3. Make your changes in the relevant `packages/*` or `apps/*` directory.
 4. Add or update tests, then run: `npm test --workspaces`
-5. Open a pull request with a clear description.
+5. Open a pull request using the [PR template](.github/PULL_REQUEST_TEMPLATE.md).
 
-Please read [CHANGELOG.md](CHANGELOG.md) to understand how we track changes.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for provenance requirements and [CHANGELOG.md](CHANGELOG.md) for release history.
 
 ---
 

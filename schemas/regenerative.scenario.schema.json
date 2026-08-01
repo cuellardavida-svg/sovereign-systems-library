@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sovereign.local/schemas/regenerative.scenario.schema.json",
+  "title": "Regenerative Scenario Payload",
+  "type": "object",
+  "required": [
+    "name",
+    "starting_resources",
+    "decision_points"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "starting_resources": {
+      "type": "object",
+      "required": [
+        "food",
+        "water",
+        "energy",
+        "social_trust"
+      ],
+      "properties": {
+        "food": {
+          "type": "number"
+        },
+        "water": {
+          "type": "number"
+        },
+        "energy": {
+          "type": "number"
+        },
+        "social_trust": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "decision_points": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "prompt",
+          "choices"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "prompt": {
+            "type": "string"
+          },
+          "choices": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "label",
+                "effects"
+              ],
+              "properties": {
+                "label": {
+                  "type": "string"
+                },
+                "effects": {
+                  "type": "object"
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
