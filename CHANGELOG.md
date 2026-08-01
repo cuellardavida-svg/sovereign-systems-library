@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Clarified README current-state vs planned roadmap messaging
 - Strengthened contribution and PR workflow guidance to reduce merge-noise and improve review quality
+- Updated CI Node runtime to 22 and switched install step to `npm install` (no lockfile required)
 
 ### Planned
 - `@sovereign/core` v1 public API stabilization
